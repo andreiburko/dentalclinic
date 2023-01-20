@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Специалисты</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .doctor-item__disable {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <script src="js/script.js"></script>
+    <div class="page">
+
+        <!--HEADER START-->
+
+        <header class="header-left"></header>
+        <header class="header-center">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img class="logo-img" src="images/icon.png" alt="Logo" title="ООО Семейный доктор">
+                </a>
+            </div>
+
+            <div class="header-title">
+                <p>Стоматологическая клиника</p>
+            </div>
+
+            <div class="header-address">
+                <p class="header-address-title">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Адрес:
+                </p>
+                <p>г. Минск, ул. Октябрьская, д. 16</p>
+            </div>
+
+            <div class="header-worktime">
+                <p class="header-worktime-title">
+                    <i class="fa-regular fa-clock"></i>
+                    Время работы:
+                </p>
+                <p>Работаем без выходных с 9:00 до 21:00</p>
+            </div>
+
+            <div class="header-contacts">
+                <ul class="header-contacts-list">
+                    <li class="header-contacts-item"><a class="header-contacts-link" href="tel:+375291111111">+375 (29) 111-11-11</a></li>
+                    <li class="header-contacts-item"><a class="header-contacts-link" href="tel:+375331111111">+375 (33) 111-11-11</a></li>
+                    <li class="header-contacts-item"><a class="header-contacts-link" href="tel:+375172111111">+375 (17) 211-11-11</a></li>
+                    <li class="header-contacts-item">
+                        <ul class="header-messengers-list">
+                            <li class="header-messengers-item"><a class="header-messengers-link" href="https://telegram.me/family-doctor" 
+                                title="Написать в Telegram" target="_blank"></a>
+                            </li>
+                            <li class="header-messengers-item"><a class="header-messengers-link" href="https://wa.me/+375291111111" 
+                                title="Написать в WhatsApp" target="_blank"></a>
+                            </li>
+                            <li class="header-messengers-item"><a class="header-messengers-link" href="viber://chat?number=%2B375291111111" 
+                                title="Написать в Viber" target="_blank"></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="header-ask-paragraph"><a class="header-ask-link" href="javascript: openModal();">Перезвоните мне</a></p>
+            </div>
+
+            <div class="shadow"></div>
+            <div class="modal">
+                <button type="button" class="modal-close" onclick="closeModal()">&#9587;</button>
+                <h4 class="modal-title">Мы Вам перезвоним</h4>
+                <p class="modal-text">Напишите Ваше имя и телефон, мы Вам перезвоним</p>
+                <form>
+                    <input type="text" name="name" class="modal-form-item" placeholder="Имя" required>
+                    <input type="tel" name="tel" class="modal-form-item" placeholder="Телефон" required>
+                    <button type="submit" name="send" class="modal-form-button">Перезвоните мне</button>
+                </form>
+            </div>
+        </header>
+        <header class="header-right"></header>
+
+
+        <header class="menu-left"></header>
+        <header class="menu-center">
+            <a class="menu-button" href="javascript: showMenu();"><i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars-staggered"></i></a>
+            <ul class="menu menu__hiden">
+                <li class="menu-item"><a class="menu-link" href="index.html">
+                    <i class="fa-solid fa-house-chimney fa-shake"></i>
+                    <i class="fa-solid fa-house-chimney fa-shake-no"></i> 
+                    Главная</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="about_us.html">
+                    <i class="fa-solid fa-people-group fa-shake"></i>
+                    <i class="fa-solid fa-people-group fa-shake-no"></i> 
+                    О нас</a>
+                </li>
+                <li class="menu-item"><a class="menu-link menu-link__selected" href="doctors.html">
+                    <i class="fa-solid fa-user-doctor fa-shake"></i>
+                    <i class="fa-solid fa-user-doctor fa-shake-no"></i> 
+                    Наши специалисты</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="services.html">
+                    <i class="fa-solid fa-tooth fa-shake"></i>
+                    <i class="fa-solid fa-tooth fa-shake-no"></i> 
+                    Услуги 
+                    <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-surgeon.html">Хирургия</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-therapy.html">Терапия</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-orthopedics.html">Ортопедия</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-orthodontics.html">Ортодонтия</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-implantation.html">Имплантация</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-whitening.html">Отбеливание зубов</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="feedback.html">
+                    <i class="fa-solid fa-comment-dots fa-shake"></i>
+                    <i class="fa-solid fa-comment-dots fa-shake-no"></i> 
+                    Отзывы</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="contacts.html">
+                    <i class="fa-solid fa-address-book fa-shake"></i>
+                    <i class="fa-solid fa-address-book fa-shake-no"></i> 
+                    Контакты</a>
+                </li>
+            </ul>
+        </header>
+        <header class="menu-right"></header>
+
+        <!--HEADER END-->
+
+        <!--CONTENT START-->
+
+        <div class="main-left"></div>
+        <main class="main-center main-center__doctors">
+            <aside class="doctors-specialization">
+                <h2 class="doctors-specialization-title">Выберете своего стоматолога</h2>
+                <ul class="doctors-specialization-list">
+                    <li class="doctors-specialization-item"><a class="doctors-specialization-link" href="javascript: showSurgeon();">Хирургия</a></li>
+                    <li class="doctors-specialization-item"><a class="doctors-specialization-link" href="javascript: showTherapy();">Терапия</a></li>
+                    <li class="doctors-specialization-item"><a class="doctors-specialization-link" href="javascript: showOrthopedics();">Ортопедия</a></li>
+                    <li class="doctors-specialization-item"><a class="doctors-specialization-link" href="javascript: showOrthodontics();">Ортодонтия</a></li>
+                    <li class="doctors-specialization-item"><a class="doctors-specialization-link" href="javascript: showSurgeon();">Имплантация</a></li>
+                    <li class="doctors-specialization-item"><a class="doctors-specialization-link" href="javascript: showTherapy();">Отбеливание зубов</a></li>
+                </ul>
+            </aside>
+            <article class="doctors">
+                <h1 class="doctors-title">Наши специалисты</h1>
+                <p class="doctors-slogan">В нашей клинике работают высококлассные специалисты с большим опытом работы.<br>
+                    Выберите подходящего врача и запишитесь на консультацию</p>
+                <div class="doctors-block">
+
+                    <div class="doctor-item" id="osokin">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Осокин Александр Викторович</h3>
+                            <p class="doctor-position">Врач стоматолог-ортопед</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 25 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология ортопедическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">все виды высококачественного протезирования: съемные, несъемные, 
+                                безметалловые конструкции, цирконий, протезирование на имплантах, вкладки, виниры</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor_osokin.jpg" alt="doctor_osokin" title="Осокин Александр Викторович">
+                        </div>
+                    </div>
+
+                    <div class="doctor-item" id="anisimov">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Анисимов Дмитрий Владимирович</h3>
+                            <p class="doctor-position">Врач стоматолог-хирург</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 5 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология хирургическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">имплантация, пародонтология, удаление зубов любой сложности, удаление 
+                                зубов мудрости</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor-anisimov.jpg" alt="doctor_anisimov" title="Анисимов Дмитрий Владимирович">
+                        </div>
+                    </div>
+
+                    <div class="doctor-item" id="vardanan">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Варданян Давид Араевич</h3>
+                            <p class="doctor-position">Врач стоматолог-хирург</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 5 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология хирургическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">имплантация, наращивание костной ткани, протезирование зубов, 
+                                хирургическое удаление зубов любой сложности</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor-vardanan.jpg" alt="doctor_vardanan" title="Варданян Давид Араевич">
+                        </div>
+                    </div>
+
+                    <div class="doctor-item" id="soha">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Соха Анастасия Юрьевна</h3>
+                            <p class="doctor-position">Врач стоматолог-терапевт</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 10 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология терапевтическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">терапевтическое лечение, лечение пульпита, эстетическая реставрация 
+                                зубов, профессиональная гигиена зубов, отбеливание зубов</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor-soha.jpg" alt="doctor_soha" title="Соха Анастасия Юрьевна">
+                        </div>
+                    </div>
+
+                    <div class="doctor-item" id="ivanova">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Иванова Оксана Григорьевна</h3>
+                            <p class="doctor-position">Врач стоматолог-ортодонт</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 20 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология ортодонтическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">выравнивание зубов и исправление прикуса любой сложности, установка 
+                                брекет-систем, детский прием</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor-ivanova.jpg" alt="doctor_ivanova" title="Иванова Оксана Григорьевна">
+                        </div>
+                    </div>
+
+                    <div class="doctor-item" id="sinelschikova">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Синельщикова Елена Дмитриевна</h3>
+                            <p class="doctor-position">Врач стоматолог-терапевт</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 5 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология терапевтическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">терапевтическое лечение, эстетическая реставрация, профессиональная 
+                                гигиена и отбеливание зубов, детский прием</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor-sinelschikova.jpg" alt="doctor_sinelschikova" title="Синельщикова Елена Дмитриевна">
+                        </div>
+                    </div>
+
+                    <div class="doctor-item" id="chernov">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Чернов Андрей Ростиславович</h3>
+                            <p class="doctor-position">Врач стоматолог-ортопед</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 8 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология ортопедическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">ортопедическое восстановление зубов с использованием несъемных 
+                                конструкций, все выды протезирования зубов, протезирование на имплантах</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor-chernov.jpg" alt="doctor_chernov" title="Чернов Андрей Ростиславович">
+                        </div>
+                    </div>
+
+                    <div class="doctor-item" id="eremin">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Еремин Дмитрий Александрович</h3>
+                            <p class="doctor-position">Врач стоматолог-ортодонт</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 6 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология ортодонтическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">выравнивание зубов и исправление прикуса любой сложности, лечение с 
+                                использованием LM-активаторов и бректет-систем</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor-eremin.jpg" alt="doctor_eremin" title="Еремин Дмитрий Александрович">
+                        </div>
+                    </div>
+
+                    <div class="doctor-item" id="sudorgina">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Судоргина Елена Сергеевна</h3>
+                            <p class="doctor-position">Врач стоматолог-тепапевт</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 8 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология терапевтическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">терапевтическое лечение, лечение пульпита и перидонтита, 
+                                эстетическая реставрация, профессиональная гигиена и отбеливание зубов</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor-sudorgina.jpg" alt="doctor_sudorgina" title="Судоргина Елена Сергеевна">
+                        </div>
+                    </div>
+
+                    <div class="doctor-item" id="ponamarev">
+                        <div class="doctor-main-info">
+                            <h3 class="doctor-name">Понамарев Олег Викторович</h3>
+                            <p class="doctor-position">Врач стоматолог-тепапевт</p>
+                        </div>
+                        <div class="doctor-experience-block">
+                            <h4 class="doctor-experience-title">Опыт работы более 20 лет</h4>
+                            <p class="doctor-experience-subtitle">Действующие сертификаты:</p>
+                            <span class="doctor-experience-text">стоматология общей практики, стоматология терапевтическая</span>
+                            <p class="doctor-experience-subtitle">Направленность:</p>
+                            <span class="doctor-experience-text">лечение кариеса и его осложнений, художественная реставрация зубов, 
+                                отбеливание, первичное и повторное эндодонтическое лечение</span>
+                        </div>
+                        <div class="doctor-img-block">
+                            <img class="doctor-img" src="images/doctor-ponamarev.jpg" alt="doctor_ponamarev" title="Понамарев Олег Викторович">
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+        </main>
+        <div class="main-right"></div>
+
+        <!--CONTENT END-->
+
+        <!--FOOTER START-->
+
+        <footer class="footer-left"></footer>
+        <footer class="footer-center">
+            <div class="footer-info">
+                <a href="index.html">
+                    <img class="logo-img" src="images/icon.png" alt="Logo" title="ООО Семейный доктор">
+                </a>
+                <p class="footer-info-text">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Лицензия МЗ РБ М-1111 от 01.01.2022<br>
+                    УНП 11111111
+                </p>
+                <ul class="footer-info-socialnet">
+                    <li>
+                        <a class="foter-info-link" href="https://www.instagram.com/family-doctor/" target="_blank" title="Мы в Instagram">
+                            <i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a class="foter-info-link" href="https://ru-ru.facebook.com/family-doctor" target="_blank" title="Мы в Facebook">
+                            <i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a class="foter-info-link" href="https://vk.com/id00000000" target="_blank" title="Мы в VK">
+                            <i class="fa-brands fa-vk"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-services">
+                <ul class="footer-services-list">
+                    <li><p class="footer-list-title">Услуги:</p></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-surgeon.html">Хирургия</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-therapy.html">Терапия</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-orthopedics.html">Ортопедия</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-orthodontics.html">Ортодонтия</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-implantation.html">Имплантация</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-whitening.html">Отбеливание зубов</a></li>
+                </ul>
+            </div>
+            <div class="footer-contacts">
+                <ul class="footer-contacts-list">
+                    <li><p class="footer-list-title">Контакты:</p></li>
+                    <li class="footer-contacts-item">
+                        <i class="fa-regular fa-clock"></i>
+                        Ежедневно с 9:00 до 21:00
+                    </li>
+                    <li class="footer-contacts-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        г. Минск, ул. Октябрьская, д. 16
+                    </li>
+                    <li class="footer-contacts-item"><a class="footer-contacts-link" href="tel:+375291111111">+375 (29) 111-11-11</a></li>
+                    <li class="footer-contacts-item"><a class="footer-contacts-link" href="tel:+375331111111">+375 (33) 111-11-11</a></li>
+                    <li class="footer-contacts-item"><a class="footer-contacts-link" href="tel:+375172111111">+375 (17) 211-11-11</a></li>
+                    <li class="footer-contacts-item">
+                        <ul class="footer-messengers">
+                            <li class="footer-messengers-item"><a class="footer-messengers-link" href="https://telegram.me/family-doctor" 
+                                title="Написать в Telegram" target="_blank">
+                                <i class="fa-brands fa-telegram"></i></a>
+                            </li>
+                            <li class="footer-messengers-item"><a class="footer-messengers-link" href="https://wa.me/+375291111111" 
+                                title="Написать в WhatsApp" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i></a>
+                            </li>
+                            <li class="footer-messengers-item"><a class="footer-messengers-link" href="viber://chat?number=%2B375291111111" 
+                                title="Написать в Viber" target="_blank">
+                                <i class="fa-brands fa-viber"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <footer class="footer-right"></footer>
+
+        <footer class="footer-bottom-left"></footer>
+        <footer class="footer-bottom-center">
+            <span>&copy; 2015-2022 ООО &laquo;Семейный доктор&raquo;</span>
+            <span>Разработка сайта - A.Burko</span>
+        </footer>
+        <footer class="footer-bottom-right"></footer>
+
+        <!--FOOTER END-->
+
+    </div>
+</body>
+</html>

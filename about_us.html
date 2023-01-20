@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="js/script.js"></script>
+    <div class="page">
+
+        <!--HEADER START-->
+
+        <header class="header-left"></header>
+        <header class="header-center">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img class="logo-img" src="images/icon.png" alt="Logo" title="ООО Семейный доктор">
+                </a>
+            </div>
+
+            <div class="header-title">
+                <p>Стоматологическая клиника</p>
+            </div>
+
+            <div class="header-address">
+                <p class="header-address-title">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Адрес:
+                </p>
+                <p>г. Минск, ул. Октябрьская, д. 16</p>
+            </div>
+
+            <div class="header-worktime">
+                <p class="header-worktime-title">
+                    <i class="fa-regular fa-clock"></i>
+                    Время работы:
+                </p>
+                <p>Работаем без выходных с 9:00 до 21:00</p>
+            </div>
+
+            <div class="header-contacts">
+                <ul class="header-contacts-list">
+                    <li class="header-contacts-item"><a class="header-contacts-link" href="tel:+375291111111">+375 (29) 111-11-11</a></li>
+                    <li class="header-contacts-item"><a class="header-contacts-link" href="tel:+375331111111">+375 (33) 111-11-11</a></li>
+                    <li class="header-contacts-item"><a class="header-contacts-link" href="tel:+375172111111">+375 (17) 211-11-11</a></li>
+                    <li class="header-contacts-item">
+                        <ul class="header-messengers-list">
+                            <li class="header-messengers-item"><a class="header-messengers-link" href="https://telegram.me/family-doctor" 
+                                title="Написать в Telegram" target="_blank"></a>
+                            </li>
+                            <li class="header-messengers-item"><a class="header-messengers-link" href="https://wa.me/+375291111111" 
+                                title="Написать в WhatsApp" target="_blank"></a>
+                            </li>
+                            <li class="header-messengers-item"><a class="header-messengers-link" href="viber://chat?number=%2B375291111111" 
+                                title="Написать в Viber" target="_blank"></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="header-ask-paragraph"><a class="header-ask-link" href="javascript: openModal();">Перезвоните мне</a></p>
+            </div>
+
+            <div class="shadow"></div>
+            <div class="modal">
+                <button type="button" class="modal-close" onclick="closeModal()">&#9587;</button>
+                <h4 class="modal-title">Мы Вам перезвоним</h4>
+                <p class="modal-text">Напишите Ваше имя и телефон, мы Вам перезвоним</p>
+                <form>
+                    <input type="text" name="name" class="modal-form-item" placeholder="Имя" required>
+                    <input type="tel" name="tel" class="modal-form-item" placeholder="Телефон" required>
+                    <button type="submit" name="send" class="modal-form-button">Перезвоните мне</button>
+                </form>
+            </div>
+        </header>
+        <header class="header-right"></header>
+
+        <header class="menu-left"></header>
+        <header class="menu-center">
+            <a class="menu-button" href="javascript: showMenu();"><i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars-staggered"></i></a>
+            <ul class="menu menu__hiden">
+                <li class="menu-item"><a class="menu-link" href="index.html">
+                    <i class="fa-solid fa-house-chimney fa-shake"></i>
+                    <i class="fa-solid fa-house-chimney fa-shake-no"></i> 
+                    Главная</a>
+                </li>
+                <li class="menu-item"><a class="menu-link menu-link__selected" href="about_us.html">
+                    <i class="fa-solid fa-people-group fa-shake"></i>
+                    <i class="fa-solid fa-people-group fa-shake-no"></i> 
+                    О нас</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="doctors.html">
+                    <i class="fa-solid fa-user-doctor fa-shake"></i>
+                    <i class="fa-solid fa-user-doctor fa-shake-no"></i> 
+                    Наши специалисты</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="services.html">
+                    <i class="fa-solid fa-tooth fa-shake"></i>
+                    <i class="fa-solid fa-tooth fa-shake-no"></i> 
+                    Услуги 
+                    <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-surgeon.html">Хирургия</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-therapy.html">Терапия</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-orthopedics.html">Ортопедия</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-orthodontics.html">Ортодонтия</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-implantation.html">Имплантация</a></li>
+                        <li class="sub-menu-item"><a class="sub-menu-link" href="direction-whitening.html">Отбеливание зубов</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="feedback.html">
+                    <i class="fa-solid fa-comment-dots fa-shake"></i>
+                    <i class="fa-solid fa-comment-dots fa-shake-no"></i> 
+                    Отзывы</a>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="contacts.html">
+                    <i class="fa-solid fa-address-book fa-shake"></i>
+                    <i class="fa-solid fa-address-book fa-shake-no"></i> 
+                    Контакты</a>
+                </li>
+            </ul>
+        </header>
+        <header class="menu-right"></header>
+
+        <!--HEADER END-->
+
+        <!--CONTENT START-->
+
+        <div class="main-left"></div>
+        <main class="main-center main-center__aboutus">
+            <aside class="license-block">
+                <h2 class="license-title">Лицензии и награды</h2>
+                <p class="license-text">Деятельность клиники сертифицирована, мы имеем все необходимые лицензии и разрешающие документы.</p>
+
+                <a href="images/photogallery/license1.png" data-fancybox="license-gallery">
+                    <div class="license-img-block">
+                        <img class="license-img" src = "images/photogallery/mini/license1min.jpg" alt ="license-1" title="Лицензия">
+                    </div>
+                </a>
+
+                <a href="images/photogallery/license2.png" data-fancybox="license-gallery">
+                    <div class="license-img-block">
+                        <img class="license-img" src = "images/photogallery/mini/license2min.jpg" alt ="license-2" title="Лицензия">
+                    </div>
+                </a>
+
+                <a href="images/photogallery/license3.png" data-fancybox="license-gallery">
+                    <div class="license-img-block">
+                        <img class="license-img" src = "images/photogallery/mini/license3min.jpg" alt ="license-3" title="Заключение">
+                    </div>
+                </a>
+
+                <a href="images/photogallery/license4.png" data-fancybox="license-gallery">
+                    <div class="license-img-block">
+                        <img class="license-img" src = "images/photogallery/mini/license4min.jpg" alt ="license-4" title="Заключение">
+                    </div>
+                </a>
+            </aside>
+
+            <article class="aboutus-block">
+                <h1 class="aboutus-title">О клинике</h1>
+                <p class="aboutus-subtitle">Вы получите качественное лечение на современном оборудовании по приемлимым ценам</p>
+                <div class="clearfix">
+                    <figure class="aboutus-img-block">
+                        <img class="aboutus-img" src="images/aboutus.jpg" title="Наша клиника" alt="OurClinic">
+                    </figure>
+                    <p class="aboutus-paragraph">Философия клиники Ваша здоровая улыбка – наша работа. В стенах нашей стоматологической клиники 
+                        Вы всегда можете рассчитывать на профессиональное оказание услуг в кратчайшие сроки.</p>
+                    <p class="aboutus-subparagraph">Современное оборудование, профессионализм врачей, опыт, а главное – внимательное отношение к 
+                        пациенту.</p>
+                    <p class="aboutus-subparagraph">Главное направление – оказание качественной стоматологической помощи (детская стоматология, 
+                        терапевтическое лечение, хирургическое лечение, имплантология, ортодонтическое лечение, ортопедия).</p>
+                    <p class="aboutus-subparagraph">Каждый месяц у нас проходят акции и специальные предложения.</p>
+                </div>
+
+                <h2 class="aboutus-title">Фотографии клиники</h2>
+                <div class="gallery-block">
+                    <a href="images/photogallery/gallery1.jpg" data-fancybox="gallery">
+                        <div class="gallery-img-block">
+                            <img class="gallery-img" src = "images/photogallery/mini/min1.jpg" alt ="gallery-picture-1" title="Наши клиенты">
+                        </div>
+                    </a>
+
+                    <a href="images/photogallery/gallery2.jpg" data-fancybox="gallery">
+                        <div class="gallery-img-block">
+                            <img class="gallery-img" src = "images/photogallery/mini/min2.jpg" alt ="gallery-picture-2" title="Наши специалисты">
+                        </div>
+                    </a>
+
+                    <a href="images/photogallery/gallery3.jpg" data-fancybox="gallery">
+                        <div class="gallery-img-block">
+                            <img class="gallery-img" src = "images/photogallery/mini/min3.jpg" alt ="gallery-picture-3" title="Наши клиенты">
+                        </div>
+                    </a>
+
+                    <a href="images/photogallery/gallery4.jpg" data-fancybox="gallery">
+                        <div class="gallery-img-block">
+                            <img class="gallery-img" src = "images/photogallery/mini/min4.jpg" alt ="gallery-picture-4" title="Работаем с детьми">
+                        </div>
+                    </a>
+
+                    <a href="images/photogallery/gallery5.jpg" data-fancybox="gallery">
+                        <div class="gallery-img-block">
+                            <img class="gallery-img" src = "images/photogallery/mini/min5.jpg" alt ="gallery-picture-5" title="Наши клиенты">
+                        </div>
+                    </a>
+
+                    <a href="images/photogallery/gallery6.jpg" data-fancybox="gallery">
+                        <div class="gallery-img-block">
+                            <img class="gallery-img" src = "images/photogallery/mini/min6.jpg" alt ="gallery-picture-6" title="Наши клиенты">
+                        </div>
+                    </a>
+
+                    <a href="images/photogallery/gallery7.jpg" data-fancybox="gallery">
+                        <div class="gallery-img-block">
+                            <img class="gallery-img" src = "images/photogallery/mini/min7.jpg" alt ="gallery-picture-7" title="Наши клиенты">
+                        </div>
+                    </a>
+
+                    <a href="images/photogallery/gallery8.jpg" data-fancybox="gallery">
+                        <div class="gallery-img-block">
+                            <img class="gallery-img" src = "images/photogallery/mini/min8.jpg" alt ="gallery-picture-8" title="Оборудование клиники">
+                        </div>
+                    </a>
+
+                    <a href="images/photogallery/gallery9.jpg" data-fancybox="gallery">
+                        <div class="gallery-img-block">
+                            <img class="gallery-img" src = "images/photogallery/mini/min9.jpg" alt ="gallery-picture-9" title="Наши клиенты">
+                        </div>
+                    </a>
+                </div>
+            </article>
+
+            <aside class="partners-block">
+                <h2 class="partners-title">Наши партнеры</h2>
+                <div class="partners-img-block">
+                    <a class="partners-link" href="https://www.priorbank.by/" target="_blank">
+                        <img class="partners-img" src="images/priorbank.gif" title="Перейти на сайт" alt="Priorbank">
+                    </a>
+                </div>
+                <div class="partners-img-block">
+                    <a class="partners-link" href="https://www.alfabank.by/" target="_blank">
+                        <img class="partners-img" src="images/alfabank.gif" title="Перейти на сайт" alt="Alfabank">
+                    </a>
+                </div>
+                <div class="partners-img-block">
+                    <a class="partners-link" href="https://kupala.by/" target="_blank">
+                        <img class="partners-img" src="images/kupala.gif" title="Перейти на сайт" alt="Kupala">
+                    </a>
+                </div>
+                <div class="partners-img-block">
+                    <a class="partners-link" href="https://novolekar.by/" target="_blank">
+                        <img class="partners-img" src="images/novolekar.jpg" title="Перейти на сайт" alt="Novolecar">
+                    </a>
+                </div>
+                <div class="partners-img-block">
+                    <a class="partners-link" href="https://www.epam.com/" target="_blank">
+                        <img class="partners-img" src="images/epam.gif" title="Перейти на сайт" alt="Epam">
+                    </a>
+                </div>
+                <div class="partners-img-block">
+                    <a class="partners-link" href="https://spariviera.by/" target="_blank">
+                        <img class="partners-img" src="images/sparivera.gif" title="Перейти на сайт" alt="RiveraSpa">
+                    </a>
+                </div>
+            </aside>
+        </main>
+        <div class="main-right"></div>
+
+        <!--CONTENT END-->
+
+        <!--FOOTER START-->
+
+        <footer class="footer-left"></footer>
+        <footer class="footer-center">
+            <div class="footer-info">
+                <a href="index.html">
+                    <img class="logo-img" src="images/icon.png" alt="Logo" title="ООО Семейный доктор">
+                </a>
+                <p class="footer-info-text">
+                    <i class="fa-regular fa-file-lines"></i>
+                    Лицензия МЗ РБ М-1111 от 01.01.2022<br>
+                    УНП 11111111
+                </p>
+                <ul class="footer-info-socialnet">
+                    <li>
+                        <a class="foter-info-link" href="https://www.instagram.com/family-doctor/" target="_blank" title="Мы в Instagram">
+                            <i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a class="foter-info-link" href="https://ru-ru.facebook.com/family-doctor" target="_blank" title="Мы в Facebook">
+                            <i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a class="foter-info-link" href="https://vk.com/id00000000" target="_blank" title="Мы в VK">
+                            <i class="fa-brands fa-vk"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-services">
+                <ul class="footer-services-list">
+                    <li><p class="footer-list-title">Услуги:</p></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-surgeon.html">Хирургия</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-therapy.html">Терапия</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-orthopedics.html">Ортопедия</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-orthodontics.html">Ортодонтия</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-implantation.html">Имплантация</a></li>
+                    <li class="footer-services-item"><a class="footer-services-link" href="direction-whitening.html">Отбеливание зубов</a></li>
+                </ul>
+            </div>
+            <div class="footer-contacts">
+                <ul class="footer-contacts-list">
+                    <li><p class="footer-list-title">Контакты:</p></li>
+                    <li class="footer-contacts-item">
+                        <i class="fa-regular fa-clock"></i>
+                        Ежедневно с 9:00 до 21:00
+                    </li>
+                    <li class="footer-contacts-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        г. Минск, ул. Октябрьская, д. 16
+                    </li>
+                    <li class="footer-contacts-item"><a class="footer-contacts-link" href="tel:+375291111111">+375 (29) 111-11-11</a></li>
+                    <li class="footer-contacts-item"><a class="footer-contacts-link" href="tel:+375331111111">+375 (33) 111-11-11</a></li>
+                    <li class="footer-contacts-item"><a class="footer-contacts-link" href="tel:+375172111111">+375 (17) 211-11-11</a></li>
+                    <li class="footer-contacts-item">
+                        <ul class="footer-messengers">
+                            <li class="footer-messengers-item"><a class="footer-messengers-link" href="https://telegram.me/family-doctor" 
+                                title="Написать в Telegram" target="_blank">
+                                <i class="fa-brands fa-telegram"></i></a>
+                            </li>
+                            <li class="footer-messengers-item"><a class="footer-messengers-link" href="https://wa.me/+375291111111" 
+                                title="Написать в WhatsApp" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i></a>
+                            </li>
+                            <li class="footer-messengers-item"><a class="footer-messengers-link" href="viber://chat?number=%2B375291111111" 
+                                title="Написать в Viber" target="_blank">
+                                <i class="fa-brands fa-viber"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <footer class="footer-right"></footer>
+
+        <footer class="footer-bottom-left"></footer>
+        <footer class="footer-bottom-center">
+            <span>&copy; 2015-2022 ООО &laquo;Семейный доктор&raquo;</span>
+            <span>Разработка сайта - A.Burko</span>
+        </footer>
+        <footer class="footer-bottom-right"></footer>
+
+        <!--FOOTER END-->
+
+    </div>
+</body>
+</html>
